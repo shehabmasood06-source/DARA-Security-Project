@@ -1,0 +1,214 @@
+<!DOCTYPE html><html dir="rtl" lang="ar"><head><meta charset="UTF-8">
+<title>تقرير الفحص الأمني</title>
+<style>
+body{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding:30px; background-color:#f4f7f6; color:#333;}
+.container{max-width:1000px; margin:auto; background:white; padding:20px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1);}
+h1{color:#2c3e50; text-align:center;}
+table{border-collapse:collapse; width:100%; margin-top:15px;}
+th,td{border:1px solid #ddd; padding:12px; text-align:right;}
+th{background-color:#34495e; color:white;}
+tr:nth-child(even){background-color:#f9f9f9;}
+.sev-Critical{color:#e74c3c; font-weight:bold;}
+.sev-High{color:#e67e22; font-weight:bold;}
+.summary-box{background-color:#e8f4f8; padding:15px; border-right:5px solid #3498db; margin-bottom:20px;}
+</style></head><body>
+<div class="container">
+<h1>🛡️ تقرير الفحص الأمني للتطبيقات</h1>
+<div class="summary-box">
+    <p><b>التطبيق المفحوص:</b> python:3.8-slim</p>
+    <p><b>تاريخ الفحص:</b> 2026-11-06 19:37</p>
+    <p><b>إجمالي الثغرات المكتشفة:</b> 465</p>
+</div>
+<h2>📊 ملخص الثغرات حسب الخطورة</h2>
+<table><tr><th>مستوى الخطورة</th><th>العدد</th></tr><tr><td>Critical</td><td>31</td></tr><tr><td>High</td><td>183</td></tr><tr><td>Medium</td><td>117</td></tr><tr><td>Low</td><td>20</td></tr><tr><td>Negligible</td><td>113</td></tr><tr><td>Unknown</td><td>1</td></tr></table>
+
+<h2>⚠️ أهم الثغرات (Critical + High)</h2>
+<p><i>(يتم عرض أول 20 ثغرة فقط للاختصار)</i></p>
+<table><tr><th>رقم الثغرة (CVE)</th><th>المكتبة المصابة</th><th>الإصدار الحالي</th>
+<th>الإصدار المصلح</th><th>الخطورة</th><th>التفاصيل</th></tr><tr>
+    <td>CVE-2007-5894</td>
+    <td>krb5</td>
+    <td>1.21.3</td>
+    <td>Not Available</td>
+    <td class='sev-High'>High</td>
+    <td>
+        <button onclick="alert('CVE: CVE-2007-5894\nPackage: krb5\nCurrent: 1.21.3\nFix: Not Available\nSeverity: High')">عرض التفاصيل</button>
+    </td>
+    </tr><tr>
+    <td>CVE-2026-18798</td>
+    <td>openssl</td>
+    <td>3.5.7</td>
+    <td>3.5.8</td>
+    <td class='sev-High'>High</td>
+    <td>
+        <button onclick="alert('CVE: CVE-2026-18798\nPackage: openssl\nCurrent: 3.5.7\nFix: 3.5.8\nSeverity: High')">عرض التفاصيل</button>
+    </td>
+    </tr><tr>
+    <td>CVE-2026-63076</td>
+    <td>openssl</td>
+    <td>3.5.7</td>
+    <td>3.0.22</td>
+    <td class='sev-High'>High</td>
+    <td>
+        <button onclick="alert('CVE: CVE-2026-63076\nPackage: openssl\nCurrent: 3.5.7\nFix: 3.0.22\nSeverity: High')">عرض التفاصيل</button>
+    </td>
+    </tr><tr>
+    <td>CVE-2025-9086</td>
+    <td>curl</td>
+    <td>8.14.1</td>
+    <td>8.16.0</td>
+    <td class='sev-High'>High</td>
+    <td>
+        <button onclick="alert('CVE: CVE-2025-9086\nPackage: curl\nCurrent: 8.14.1\nFix: 8.16.0\nSeverity: High')">عرض التفاصيل</button>
+    </td>
+    </tr><tr>
+    <td>CVE-2026-63073</td>
+    <td>openssl</td>
+    <td>3.5.7</td>
+    <td>3.4.7</td>
+    <td class='sev-Critical'>Critical</td>
+    <td>
+        <button onclick="alert('CVE: CVE-2026-63073\nPackage: openssl\nCurrent: 3.5.7\nFix: 3.4.7\nSeverity: Critical')">عرض التفاصيل</button>
+    </td>
+    </tr><tr>
+    <td>CVE-2026-92392</td>
+    <td>curl</td>
+    <td>8.14.1</td>
+    <td>8.14.3</td>
+    <td class='sev-High'>High</td>
+    <td>
+        <button onclick="alert('CVE: CVE-2026-92392\nPackage: curl\nCurrent: 8.14.1\nFix: 8.14.3\nSeverity: High')">عرض التفاصيل</button>
+    </td>
+    </tr><tr>
+    <td>CVE-2026-9079</td>
+    <td>curl</td>
+    <td>8.14.1</td>
+    <td>8.21.0</td>
+    <td class='sev-Critical'>Critical</td>
+    <td>
+        <button onclick="alert('CVE: CVE-2026-9079\nPackage: curl\nCurrent: 8.14.1\nFix: 8.21.0\nSeverity: Critical')">عرض التفاصيل</button>
+    </td>
+    </tr><tr>
+    <td>CVE-2026-9079</td>
+    <td>curl</td>
+    <td>8.14.1-2+deb13u7</td>
+    <td>Not Available</td>
+    <td class='sev-Critical'>Critical</td>
+    <td>
+        <button onclick="alert('CVE: CVE-2026-9079\nPackage: curl\nCurrent: 8.14.1-2+deb13u7\nFix: Not Available\nSeverity: Critical')">عرض التفاصيل</button>
+    </td>
+    </tr><tr>
+    <td>CVE-2026-9079</td>
+    <td>libcurl4t64</td>
+    <td>8.14.1-2+deb13u7</td>
+    <td>Not Available</td>
+    <td class='sev-Critical'>Critical</td>
+    <td>
+        <button onclick="alert('CVE: CVE-2026-9079\nPackage: libcurl4t64\nCurrent: 8.14.1-2+deb13u7\nFix: Not Available\nSeverity: Critical')">عرض التفاصيل</button>
+    </td>
+    </tr><tr>
+    <td>CVE-2026-14457</td>
+    <td>openssl</td>
+    <td>3.5.7</td>
+    <td>3.4.7</td>
+    <td class='sev-High'>High</td>
+    <td>
+        <button onclick="alert('CVE: CVE-2026-14457\nPackage: openssl\nCurrent: 3.5.7\nFix: 3.4.7\nSeverity: High')">عرض التفاصيل</button>
+    </td>
+    </tr><tr>
+    <td>CVE-2026-92391</td>
+    <td>curl</td>
+    <td>8.14.1</td>
+    <td>8.14.3</td>
+    <td class='sev-High'>High</td>
+    <td>
+        <button onclick="alert('CVE: CVE-2026-92391\nPackage: curl\nCurrent: 8.14.1\nFix: 8.14.3\nSeverity: High')">عرض التفاصيل</button>
+    </td>
+    </tr><tr>
+    <td>CVE-2026-92391</td>
+    <td>curl</td>
+    <td>8.14.1-2+deb13u7</td>
+    <td>Not Available</td>
+    <td class='sev-High'>High</td>
+    <td>
+        <button onclick="alert('CVE: CVE-2026-92391\nPackage: curl\nCurrent: 8.14.1-2+deb13u7\nFix: Not Available\nSeverity: High')">عرض التفاصيل</button>
+    </td>
+    </tr><tr>
+    <td>CVE-2026-92391</td>
+    <td>libcurl4t64</td>
+    <td>8.14.1-2+deb13u7</td>
+    <td>Not Available</td>
+    <td class='sev-High'>High</td>
+    <td>
+        <button onclick="alert('CVE: CVE-2026-92391\nPackage: libcurl4t64\nCurrent: 8.14.1-2+deb13u7\nFix: Not Available\nSeverity: High')">عرض التفاصيل</button>
+    </td>
+    </tr><tr>
+    <td>CVE-2026-86409</td>
+    <td>curl</td>
+    <td>8.14.1</td>
+    <td>8.14.3</td>
+    <td class='sev-High'>High</td>
+    <td>
+        <button onclick="alert('CVE: CVE-2026-86409\nPackage: curl\nCurrent: 8.14.1\nFix: 8.14.3\nSeverity: High')">عرض التفاصيل</button>
+    </td>
+    </tr><tr>
+    <td>CVE-2026-86409</td>
+    <td>curl</td>
+    <td>8.14.1-2+deb13u7</td>
+    <td>Not Available</td>
+    <td class='sev-High'>High</td>
+    <td>
+        <button onclick="alert('CVE: CVE-2026-86409\nPackage: curl\nCurrent: 8.14.1-2+deb13u7\nFix: Not Available\nSeverity: High')">عرض التفاصيل</button>
+    </td>
+    </tr><tr>
+    <td>CVE-2026-86409</td>
+    <td>libcurl4t64</td>
+    <td>8.14.1-2+deb13u7</td>
+    <td>Not Available</td>
+    <td class='sev-High'>High</td>
+    <td>
+        <button onclick="alert('CVE: CVE-2026-86409\nPackage: libcurl4t64\nCurrent: 8.14.1-2+deb13u7\nFix: Not Available\nSeverity: High')">عرض التفاصيل</button>
+    </td>
+    </tr><tr>
+    <td>CVE-2026-92387</td>
+    <td>curl</td>
+    <td>8.14.1</td>
+    <td>8.14.3</td>
+    <td class='sev-High'>High</td>
+    <td>
+        <button onclick="alert('CVE: CVE-2026-92387\nPackage: curl\nCurrent: 8.14.1\nFix: 8.14.3\nSeverity: High')">عرض التفاصيل</button>
+    </td>
+    </tr><tr>
+    <td>CVE-2026-92387</td>
+    <td>curl</td>
+    <td>8.14.1-2+deb13u7</td>
+    <td>Not Available</td>
+    <td class='sev-High'>High</td>
+    <td>
+        <button onclick="alert('CVE: CVE-2026-92387\nPackage: curl\nCurrent: 8.14.1-2+deb13u7\nFix: Not Available\nSeverity: High')">عرض التفاصيل</button>
+    </td>
+    </tr><tr>
+    <td>CVE-2026-92387</td>
+    <td>libcurl4t64</td>
+    <td>8.14.1-2+deb13u7</td>
+    <td>Not Available</td>
+    <td class='sev-High'>High</td>
+    <td>
+        <button onclick="alert('CVE: CVE-2026-92387\nPackage: libcurl4t64\nCurrent: 8.14.1-2+deb13u7\nFix: Not Available\nSeverity: High')">عرض التفاصيل</button>
+    </td>
+    </tr><tr>
+    <td>CVE-2026-87862</td>
+    <td>curl</td>
+    <td>8.14.1</td>
+    <td>8.14.3</td>
+    <td class='sev-High'>High</td>
+    <td>
+        <button onclick="alert('CVE: CVE-2026-87862\nPackage: curl\nCurrent: 8.14.1\nFix: 8.14.3\nSeverity: High')">عرض التفاصيل</button>
+    </td>
+    </tr></table>
+
+<div style="margin-top:30px; text-align:center; color:#7f8c8d; font-size:14px;">
+    تم إنشاء هذا التقرير تلقائياً باستخدام أداة Grype - مشروع حماية المؤسسات الصغيرة
+</div>
+</div>
+</body></html>

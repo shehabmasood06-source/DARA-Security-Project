@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>درع - لوحة التحكم</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f0f2f5; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h1 { color: #1a73e8; text-align: center; }
+        .form-box { display: flex; gap: 10px; margin-bottom: 20px; }
+        input[type="text"] { flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; }
+        button { padding: 10px 20px; background-color: #1a73e8; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #1557b0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: center; }
+        th { background-color: #1a73e8; color: white; }
+        .crit { color: #d93025; font-weight: bold; }
+        .high { color: #e37400; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🛡️ نظام درع للفحص الأمني</h1>
+        <form class="form-box" action="/scan" method="POST">
+            <input type="text" name="image" placeholder="أدخل اسم صورة Docker (مثال: python:3.8-slim)" required>
+            <button type="submit">فحص الآن 🚀</button>
+        </form>
+<div style="text-align: left; margin-bottom: 10px;">
+    <a href="/report" target="_blank">
+        <button type="button" style="background-color: #d93025;">عرض التقرير التفصيلي 📄</button>
+    </a>
+</div>
+        <h2>📊 سجل الفحوصات (Dashboard)</h2>
+        <table>
+            <tr>
+                <th>التطبيق</th>
+                <th>التاريخ</th>
+                <th>الإجمالي</th>
+                <th>Critical</th>
+                <th>High</th>
+                <th>Medium</th>
+            </tr>
+            {% for scan in scans %}
+            <tr>
+                <td>{{ scan[1] }}</td>
+                <td>{{ scan[2] }}</td>
+                <td>{{ scan[3] }}</td>
+                <td class="crit">{{ scan[4] }}</td>
+                <td class="high">{{ scan[5] }}</td>
+                <td>{{ scan[6] }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="6">لا يوجد فحوصات سابقة. ابدأ بفحص تطبيق!</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
